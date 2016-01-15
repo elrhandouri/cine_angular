@@ -16,6 +16,19 @@ Running `grunt test` will run the unit tests with karma.
 ## Dependency
 Read [install_readFirst.sh](https://github.com/elrhandouri/cine_angular/blob/master/install_readFirst.sh)
 
+### With the help of Cours and Tutos from
+
+[openclassrooms.com/Javascript](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript)
+
+[openclassrooms.com/Node.js](https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js)
+
+[openclassrooms.com/AngularJs](https://openclassrooms.com/courses/developpez-vos-applications-web-avec-angularjs)
+
+[openclassrooms.com/bootstrap](https://openclassrooms.com/courses/prenez-en-main-bootstrap)
+
+And other...
+
+
 # YOEMAN
 
 `yo angular`
