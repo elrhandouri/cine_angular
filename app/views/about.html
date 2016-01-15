@@ -1,0 +1,241 @@
+<p>This is the about view.</p>
+
+<div ng-hide="false">
+<button ng-click="testPromise(true);">Promise</button>
+
+<div id="log"></div>
+
+<div id="log2" ></div>
+</div>
+
+
+
+
+<style media="screen" type="text/css">
+
+[class*="col-"], footer {
+
+  background-color: lightgreen;
+
+  border: 2px solid black;
+
+  border-radius: 6px;
+
+  line-height: 40px;
+
+  text-align: center;
+}
+    
+    .col-lg-offset-6 {
+
+      margin-left: 50%;
+
+    }
+    
+    .col-lg-offset-4 {
+
+      margin-left: 33%;
+
+    }
+    
+    .col-lg-offset-3 {
+
+      margin-left: 25%;
+
+    }
+    
+    .btn-lg {
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 25px;
+
+}
+
+</style>
+
+<header class="page-header">
+   <h1>col-lg-*, col-lg-offset-* :</h1>
+</header>
+
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-2">2 col</div>
+
+        <div class="col-lg-2 col-lg-offset-3">2 colonnes</div>
+
+        <div class="col-lg-5">5 colonnes</div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-2">2 colonnes</div>
+         <div class="col-lg-9">9 colonnes</div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-lg-offset-4">4 colonnes</div>
+          
+        <div class="col-lg-4">4 colonnes</div>
+
+      </div>
+
+    </div>
+
+
+<header class="page-header">
+   <h1>col-lg-push-* col-lg-pull-*:</h1>
+</header>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12">12 colonnes
+
+          <div class="row">
+
+            <div class="col-lg-2 col-lg-push-10">Colonne 1</div>
+
+            <div class="col-lg-2 col-lg-push-3">Colonne 2</div>
+
+            <div class="col-lg-2 col-lg-pull-1">Colonne 3</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<header class="page-header">
+   <h1>Menu : </h1>
+</header>
+
+<div class="row">
+    <nav class="col-sm-2">
+
+        Menu
+
+    </nav>
+
+    <section class="col-sm-10">
+
+        Section
+
+        <div class="row">
+
+            <article class="col-md-10">
+
+                Article
+
+            </article>
+
+            <aside class="col-md-2">
+
+                Aside
+
+            </aside>
+
+        </div>
+
+    </section>
+</div>
+
+
+<header class="page-header">
+   <h1>form : </h1>
+</header>
+
+          <form class="well">
+
+            <legend>Si vous voulez me laisser un message</legend>
+
+            <h4>Comment m'avez-vous trouvé ?</h4>
+
+            <fieldset>
+
+              <div class="radio">
+
+                <label for="ami" class="radio">
+
+                  <input type="radio" name="origine" value="ami" id="ami">
+
+                  Par un ami 
+
+                </label>
+
+              </div>
+
+              <div class="radio">
+
+                <label for="web" class="radio">
+
+                  <input type="radio" name="origine" value="web" id="web">
+
+                  Sur le web 
+
+                </label>
+
+              </div>
+
+              <div class="radio">
+
+                <label for="hasard" class="radio">
+
+                  <input type="radio" name="origine" value="hasard" id="hasard">
+
+                  Par hasard 
+
+                </label>
+
+              </div>
+
+              <div class="radio">
+
+                <label for="autre" class="radio">
+
+                  <input type="radio" name="origine" value="autre" id="autre">
+
+                  Autre... 
+
+                </label>
+
+              </div>
+
+              <label for="textarea">Votre message :</label>
+
+                <textarea id="textarea" class="form-control" rows="4"></textarea>
+
+                <p class="help-block">Vous pouvez agrandir la fenêtre</p>
+
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+
+            </fieldset>
+
+          </form>
+
+
+
+Et le code HTML :
+
+<button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span></button>
+
+<button class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-comment"></span></button>
+
+<button class="btn btn-success btn-lg"><span class="glyphicon glyphicon-calendar"></span></button>
+
+<button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-shopping-cart"></button>
+
+<button class="btn btn-info btn-lg"><span class="glyphicon glyphicon-bullhorn"></span></button>

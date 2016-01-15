@@ -1,0 +1,71 @@
+<style>
+    .sortorder:after {
+      content: '\25b2';
+    }
+    .sortorder.reverse:after {
+      content: '\25bc';
+    }
+</style>
+
+
+<table class="movies" ng-show="movies.length > 1" ng-show="!loading" class="btn-group">
+    <tr> 
+         <th>
+            <button ng-click="order('title')" class="btn btn-primary">By Name</button><!-- add the reverse class if reverse is true -->
+            <span class="sortorder" ng-show="predicate === 'title'" ng-class="{reverse:reverse}"></span>
+         </th>
+
+         <th>
+            <button ng-click="order('vote_average')" class="btn btn-success">By Rating</button>
+            <span class="sortorder" ng-show="predicate === 'vote_average'" ng-class="{reverse:reverse}"></span>
+         </th>
+
+        <th>
+            <button ng-click="predicate=''; reverse=false" class="btn btn-danger">Popular</button>
+        </th>
+        
+    </tr>
+  </table>
+</div>
+
+
+
+<uib-pagination ng-model="currentPage" total-items="totalItems" items-per-page="itemsPerPage" max-size="maxSize" boundary-links="true" rotate="false" ng-show="!loading"></uib-pagination>
+
+
+
+<div class="movies-container" id="top" loading="loading">
+
+    <ul class="movies">
+
+        <li ng-repeat="movie in movies | orderBy:predicate:reverse">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <img ng-src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" width="200" height="300"/>
+
+                </div>
+
+                <div class="col-md-8">
+
+                    <a ng-href="#/info/{{movie.id}}"><h4 ng-bind="movie.title"></h4></a>
+
+                    <label>Année:</label><span class="date" ng-bind="movie.release_date | date:'yyyy'"></span><br/>
+
+                    <label>Note:</label><uib-rating ng-model="movie.vote_average" max="10" readonly="true"></uib-rating>(<span ng-bind="movie.vote_count"></span> avis)<br/>
+
+                </div>
+
+            </div>
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+<uib-pagination ng-model="currentPage" total-items="totalItems" items-per-page="itemsPerPage" max-size="maxSize" ng-change="pageChangedLog()" boundary-links="true" rotate="false" ng-show="!loading"></uib-pagination>

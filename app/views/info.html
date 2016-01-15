@@ -1,0 +1,41 @@
+<div class="movie-container" id="top" loading="loading">
+
+    <ul class="movie">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <img ng-src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" width="200" height="300"/>
+
+                </div>
+
+                <div class="col-md-8">
+                    
+                    <a ng-href="#/info/{{movie.id}}"><h4 ng-bind="movie.title"></h4></a>
+                    
+                    <a ng-href="{{movie.homepage}}"><h4 >Homepage</h4></a>
+
+                    <a ng-href="http://www.imdb.com/title/{{movie.imdb_id}}"><img alt="on IMDb" src="http://g-ecx.images-amazon.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png"></a><br/>
+                    
+                    <label>Année : </label><span class="date" ng-bind="movie.release_date | date:'yyyy'"></span><br/>
+
+                    <label>Note : </label><rating ng-model="movie.vote_average" max="10" readonly="true"></rating>(<span ng-bind="movie.vote_count"></span> avis)<br/>
+                    
+                    <dt>Genre : </dt>
+                    <dd>
+                        <ul>
+                            <li ng-repeat="genre in movie.genres">{{genre.name}}</li>
+                        </ul>
+                    </dd>
+                    
+                    <label>Budget : </label><span ng-bind="'$' + movie.budget"></span><br/>
+                    
+                    <label>Runtime : </label><span ng-bind="movie.runtime + 'min'">min</span><br/>
+                    
+                    <label>Synopsis : </label><div ng-bind="movie.overview"></div><br/>
+                </div>
+
+            </div>
+    </ul>
+</div>
